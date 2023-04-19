@@ -1,0 +1,32 @@
+<div class="jumbotron">
+  <h1 class="display-4"><%= @library.book_name %></h1>
+  <p class="lead">
+    <%= @library.Author_name %>
+  </p>
+  <hr class="my-4">
+  <p> <%= @library.brief_description %></p>
+  <br></br>
+  <p id="extended-description" style="display:none;"> <%= @library.extended_description %></p>
+   <%= link_to "Learn more", "#", id: "learn-more-button", class:"btn btn-primary" %>  
+  <br></br>
+  <%= link_to "Assign to a student", studs_path,class:"btn btn-secondary"%>
+  <br></br>
+  <%= link_to "Edit", edit_library_path(@library),class:"btn btn-secondary" %> |
+  <%= link_to "Back", libraries_path,class:"btn btn-dark"%>
+  <br></br>
+  <%= button_to "Destroy ", @library, method: :delete ,data: { confirm: "Are you sure?" },class:"btn btn-primary"%>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $("#learn-more-button").click(function() {
+      $("#extended-description").toggle();
+    });
+  });
+</script>
+
+
+
+
+
+

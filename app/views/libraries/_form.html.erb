@@ -1,0 +1,33 @@
+<%= form_with(model: library) do |form| %>
+  <% if library.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(library.errors.count, "error") %> prohibited this library from being saved:</h2>
+
+      <ul>
+        <% library.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.text_field :book_name,class:'form-control',placeholder:"Book Name" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.text_field :Author_name,class:'form-control',placeholder:"Author Name" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.text_field :brief_description,class:'form-control',placeholder:"Brief Description" %>
+  </div>
+  <div class="field form-group">
+    <%= form.text_field :Extended_description,class:'form-control',placeholder:"Extended Description" %>
+  </div>
+  <br/>
+
+  <div class='actions'>
+    <%= form.submit class:'btn btn-secondary' %>
+  </div>
+<% end %>

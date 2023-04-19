@@ -1,0 +1,17 @@
+def assign_to_student
+  @libraries = library.find(params[:address])
+  @studs= Stud.all
+end
+
+def update
+  @libraries = library.find(params[:address])
+  @library.stud_address = params[:library][:stud_address]
+  @library.borrow_date = Time.now
+  @library.return_date = Time.now + 10.days
+
+  if @library.save
+    redirect_to library_path, notice: 'Book was successfully assigned to student.'
+  else
+    render :assign_to_student
+  end
+end
