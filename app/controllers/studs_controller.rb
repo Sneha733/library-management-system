@@ -25,7 +25,7 @@ class StudsController < ApplicationController
 
     respond_to do |format|
       if @stud.save
-        format.html { redirect_to stud_url(@stud), notice: "Stud was successfully created." }
+        format.html { redirect_to stud_url(@stud), notice: "Student was successfully created." }
         format.json { render :show, status: :created, location: @stud }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class StudsController < ApplicationController
   def update
     respond_to do |format|
       if @stud.update(stud_params)
-        format.html { redirect_to stud_url(@stud), notice: "Stud was successfully updated." }
+        format.html { redirect_to stud_url(@stud), notice: "Student was successfully updated." }
         format.json { render :show, status: :ok, location: @stud }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,10 +52,10 @@ class StudsController < ApplicationController
     @stud.destroy
 
     respond_to do |format|
-      format.html { redirect_to studs_url, notice: "Stud was successfully destroyed." }
+      format.html { redirect_to studs_url, notice: "Student was successfully destroyed." }
       format.json { head :no_content }
     end
-  end
+  end 
 
   private
     # Use callbacks to share common setup or constraints between actions.

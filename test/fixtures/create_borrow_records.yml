@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  borrowing_id: 1
+  stud_id: 1
+  library_id: 1
+
+two:
+  borrowing_id: 1
+  stud_id: 1
+  library_id: 1

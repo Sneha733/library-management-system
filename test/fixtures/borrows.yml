@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  book_id: 1
+  student_address: 1
+  borrowed_date: 2023-04-20 15:12:49
+
+two:
+  book_id: 1
+  student_address: 1
+  borrowed_date: 2023-04-20 15:12:49
